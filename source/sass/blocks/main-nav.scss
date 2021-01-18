@@ -1,0 +1,173 @@
+.main-nav {
+  @media (max-width: $tablet-only-width) {
+    position: relative;
+    z-index: 2;
+  }
+}
+
+.main-nav__toggle {
+  @include button-style-reset;
+
+  display: none;
+
+  @media (max-width: $tablet-only-width) {
+    display: block;
+    margin-left: auto;
+    padding-top: 18px;
+    padding-left: 13px;
+    padding-bottom: 18px;
+    padding-right: 13px;
+
+    background-color: $accent-color;
+
+    &:hover,
+    &:focus {
+      background-color: $basic-background-color;
+    }
+
+    &:active {
+      opacity: 0.6;
+    }
+
+    .main-nav--opened & {
+      padding-top: 13px;
+      padding-bottom: 12px;
+
+      color: $button-color;
+
+      background: $basic-background-color;
+
+      &:hover,
+      &:focus {
+        color: $accent-color;
+        outline: none;
+      }
+
+      &:active {
+        color: rgba($accent-color, 0.6);
+        outline: none;
+      }
+    }
+
+    .main-nav--nojs & {
+      display: none;
+    }
+  }
+}
+
+.main-nav__list {
+  @include list-style-reset;
+
+  padding-top: 18px;
+  padding-bottom: 9px;
+  padding-left: 15px;
+  padding-right: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  border-bottom: 1px solid rgba($light-border-color, 0.2);
+
+  @media (max-width: $tablet-only-width) {
+    position: absolute;
+    top: 0;
+    z-index: -1;
+
+    display: none;
+    padding-top: 100px;
+    padding-bottom: 138px;
+    padding-left: 0;
+    padding-right: 0;
+    width: 100%;
+
+    background-color: $basic-background-color;
+
+    .main-nav--nojs & {
+      position: static;
+    }
+
+    .main-nav--opened & {
+      display: block;
+    }
+  }
+}
+
+.main-nav li {
+  @media (max-width: $tablet-only-width) {
+    margin-bottom: 30px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.main-nav a {
+  @include link-style-reset;
+
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 32px;
+  letter-spacing: -0.005em;
+  color: $light-text-color;
+
+  opacity: 0.7;
+
+  &[href]:hover,
+  &[href]:focus {
+    opacity: 1;
+  }
+
+  &[href]:active {
+    opacity: 0.3;
+  }
+
+  @media (max-width: $tablet-only-width) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 17px;
+    padding-left: 17px;
+    padding-right: 23px;
+    padding-bottom: 15px;
+
+    font-size: 20px;
+    line-height: 28px;
+    letter-spacing: normal;
+    color: $dark-text-color;
+
+    background-color: $dark-background-color;
+
+    opacity: 1;
+
+    &[href]:hover,
+    &[href]:focus {
+      background-color: $accent-color;
+      outline: none;
+    }
+
+    &[href]:active {
+      opacity: 0.6;
+    }
+  }
+}
+
+.main-nav__image-menu {
+  display: block;
+
+  .main-nav--opened & {
+    display: none;
+  }
+}
+
+.main-nav__image-cross {
+  display: none;
+
+  .main-nav--opened & {
+    display: block;
+  }
+}
+
+.main-nav__icon {
+  flex-shrink: 0;
+}
