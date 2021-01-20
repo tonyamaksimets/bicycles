@@ -1,0 +1,143 @@
+.video {
+  padding-top: 120px;
+  padding-bottom: 45px;
+
+  text-align: center;
+
+  background-image: linear-gradient($darkest-background-color 706px, transparent 706px);
+
+  @media (max-width: $tablet-only-width) {
+    padding-top: 65px;
+    padding-bottom: 22px;
+
+    background-image: linear-gradient($darkest-background-color 413px, transparent 413px);
+  }
+
+  @media (max-width: $mobile-only-width) {
+    padding-top: 80px;
+    padding-left: 16px;
+    padding-right: 16px;
+
+    background-image: linear-gradient($darkest-background-color 384px, transparent 384px);
+  }
+}
+
+.video h2 {
+  @include title-style-reset;
+
+  margin-bottom: 20px;
+  padding-right: 10px;
+
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 30px;
+  letter-spacing: -0.005em;
+  color: $light-text-color;
+
+  @media (max-width: $tablet-only-width) {
+    margin-bottom: 16px;
+    padding-right: 0;
+
+    font-size: 24px;
+    line-height: 40px;
+  }
+
+  @media (max-width: $mobile-only-width) {
+    text-align: left;
+  }
+}
+
+.video p {
+  @include paragraph-style-reset;
+
+  margin-bottom: 53px;
+  margin-right: auto;
+  margin-left: auto;
+  width: 340px;
+
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 28px;
+  letter-spacing: -0.005em;
+  color: rgba($light-text-color, 0.7);
+
+  @media (max-width: $tablet-only-width) {
+    margin-bottom: 40px;
+    width: 430px;
+  }
+
+  @media (max-width: $mobile-only-width) {
+    margin-bottom: 50px;
+    width: auto;
+  }
+}
+
+.video__wrapper {
+  position: relative;
+}
+
+.video video {
+  @media (max-width: $tablet-only-width) {
+    width: 503px;
+    height: 282px;
+  }
+
+  @media (max-width: $mobile-only-width) {
+    width: 288px;
+    height: 162px;
+  }
+}
+
+.video__control {
+  @include button-style-reset;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+
+  padding-left: 5px;
+  width: 65px;
+  height: 65px;
+  box-sizing: border-box;
+
+  line-height: 19px;
+
+  background-color: $accent-color;
+  border-radius: 50%;
+
+  &:hover,
+  &:focus {
+    background-color: $basic-background-color;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+
+  @media (max-width: $tablet-only-width) {
+    width: 90px;
+    height: 90px;
+  }
+
+  @media (max-width: $mobile-only-width) {
+    width: 65px;
+    height: 65px;
+  }
+}
+
+.video svg {
+  @media (max-width: $tablet-only-width) {
+    width: 18px;
+    height: 25px;
+
+    line-height: 25px;
+  }
+
+  @media (max-width: $mobile-only-width) {
+    width: 14px;
+    height: 19px;
+
+    line-height: 19px;
+  }
+}
