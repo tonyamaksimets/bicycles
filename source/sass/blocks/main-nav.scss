@@ -169,5 +169,10 @@
 }
 
 .main-nav__icon {
-  flex-shrink: 0;
+  display: none;
+
+  @media (max-width: $tablet-only-width) {
+    display: block;
+    flex-shrink: 0;
+  }
 }

@@ -4,13 +4,13 @@
   padding-left: calc(50% - 440px);
 
   background-color: $darkest-background-color;
-  background-image: url("../img/background@1x.jpg");
+  background-image: url("../img/background@1x.webp");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 
   @media (min-resolution: 2dppx) {
-    background-image: url("../img/background@2x.jpg");
+    background-image: url("../img/background@2x.webp");
   }
 
   @media (max-width: $tablet-only-width) {
