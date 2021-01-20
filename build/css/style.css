@@ -385,28 +385,30 @@ template {
       .page-header--nojs {
         position: relative; } }
 
-.page-header__logo-link {
+.page-header > a:first-of-type {
   position: absolute;
   top: 315px;
   left: 72px; }
-  .page-header__logo-link[href]:hover, .page-header__logo-link[href]:focus {
+  .page-header > a:first-of-type[href]:hover, .page-header > a:first-of-type[href]:focus {
     opacity: 0.6; }
-  .page-header__logo-link[href]:active {
+  .page-header > a:first-of-type[href]:active {
     opacity: 0.3; }
   @media (max-width: 1023px) {
-    .page-header__logo-link {
+    .page-header > a:first-of-type {
       top: 21px;
-      left: 22px; }
-      .page-header--nojs .page-header__logo-link {
-        top: auto;
-        bottom: -100px;
-        left: 50%;
-        -webkit-transform: translateX(-50%);
-                transform: translateX(-50%); } }
+      left: 22px; } }
   @media (max-width: 767px) {
-    .page-header__logo-link {
+    .page-header > a:first-of-type {
       top: 21px;
       left: 16px; } }
+
+@media (max-width: 1023px) {
+  .page-header--nojs > a:first-of-type {
+    top: auto;
+    bottom: -100px;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%); } }
 
 @media (max-width: 1023px) {
   .main-nav {
@@ -435,22 +437,26 @@ template {
       .main-nav__toggle:hover, .main-nav__toggle:focus {
         background-color: #ffffff; }
       .main-nav__toggle:active {
-        opacity: 0.6; }
-      .main-nav--opened .main-nav__toggle {
-        padding-top: 13px;
-        padding-bottom: 12px;
-        color: rgba(20, 21, 23, 0.2);
-        background: #ffffff; }
-        .main-nav--opened .main-nav__toggle:hover, .main-nav--opened .main-nav__toggle:focus {
-          color: #0ad9c6;
-          outline: none; }
-        .main-nav--opened .main-nav__toggle:active {
-          color: rgba(10, 217, 198, 0.6);
-          outline: none; }
-      .main-nav--nojs .main-nav__toggle {
-        display: none; } }
+        opacity: 0.6; } }
 
-.main-nav__list {
+@media (max-width: 1023px) {
+  .main-nav--nojs .main-nav__toggle {
+    display: none; } }
+
+@media (max-width: 1023px) {
+  .main-nav--opened .main-nav__toggle {
+    padding-top: 13px;
+    padding-bottom: 12px;
+    color: rgba(20, 21, 23, 0.2);
+    background: #ffffff; }
+    .main-nav--opened .main-nav__toggle:hover, .main-nav--opened .main-nav__toggle:focus {
+      color: #0ad9c6;
+      outline: none; }
+    .main-nav--opened .main-nav__toggle:active {
+      color: rgba(10, 217, 198, 0.6);
+      outline: none; } }
+
+.main-nav ul {
   margin: 0;
   padding: 0;
   list-style: none;
@@ -468,7 +474,7 @@ template {
           justify-content: space-between;
   border-bottom: 1px solid rgba(255, 255, 255, 0.2); }
   @media (max-width: 1023px) {
-    .main-nav__list {
+    .main-nav ul {
       position: absolute;
       top: 0;
       z-index: -1;
@@ -478,11 +484,15 @@ template {
       padding-left: 0;
       padding-right: 0;
       width: 100%;
-      background-color: #ffffff; }
-      .main-nav--nojs .main-nav__list {
-        position: static; }
-      .main-nav--opened .main-nav__list {
-        display: block; } }
+      background-color: #ffffff; } }
+
+@media (max-width: 1023px) {
+  .main-nav--nojs ul {
+    position: static; } }
+
+@media (max-width: 1023px) {
+  .main-nav--opened ul {
+    display: block; } }
 
 @media (max-width: 1023px) {
   .main-nav li {
@@ -499,9 +509,9 @@ template {
   letter-spacing: -0.005em;
   color: #ffffff;
   opacity: 0.7; }
-  .main-nav a[href]:hover, .main-nav a[href]:focus {
+  .main-nav a:hover, .main-nav a:focus {
     opacity: 1; }
-  .main-nav a[href]:active {
+  .main-nav a:active {
     opacity: 0.3; }
   @media (max-width: 1023px) {
     .main-nav a {
@@ -524,21 +534,23 @@ template {
       color: #48494d;
       background-color: #f6f6f6;
       opacity: 1; }
-      .main-nav a[href]:hover, .main-nav a[href]:focus {
+      .main-nav a:hover, .main-nav a:focus {
         background-color: #0ad9c6;
         outline: none; }
-      .main-nav a[href]:active {
+      .main-nav a:active {
         opacity: 0.6; } }
 
 .main-nav__image-menu {
   display: block; }
-  .main-nav--opened .main-nav__image-menu {
-    display: none; }
+
+.main-nav--opened .main-nav__image-menu {
+  display: none; }
 
 .main-nav__image-cross {
   display: none; }
-  .main-nav--opened .main-nav__image-cross {
-    display: block; }
+
+.main-nav--opened .main-nav__image-cross {
+  display: block; }
 
 .main-nav__icon {
   display: none; }
@@ -591,7 +603,7 @@ template {
       line-height: 42px;
       text-align: center; } }
 
-.page-main__description {
+.page-main__wrapper p {
   margin: 0;
   width: 390px;
   font-weight: 300;
@@ -601,7 +613,7 @@ template {
   color: #ffffff;
   opacity: 0.8; }
   @media (max-width: 1023px) {
-    .page-main__description {
+    .page-main__wrapper p {
       width: auto;
       font-size: 18px;
       line-height: 32px;
@@ -745,7 +757,7 @@ template {
       padding-left: 0;
       padding-right: 0; } }
 
-.page-footer__headline {
+.page-footer p:first-of-type {
   margin: 0;
   position: relative;
   right: 7px;
@@ -756,15 +768,15 @@ template {
   letter-spacing: -0.005em;
   color: #1f1f1f; }
   @media (max-width: 1023px) {
-    .page-footer__headline {
+    .page-footer p:first-of-type {
       position: static;
       margin-bottom: 20px;
       font-size: 24px; } }
   @media (max-width: 767px) {
-    .page-footer__headline {
+    .page-footer p:first-of-type {
       font-size: 18px; } }
 
-.page-footer__description {
+.page-footer p:not(:first-of-type) {
   margin: 0;
   position: relative;
   right: 10px;
@@ -776,14 +788,14 @@ template {
   line-height: 31px;
   color: rgba(0, 0, 0, 0.7); }
   @media (max-width: 1023px) {
-    .page-footer__description {
+    .page-footer p:not(:first-of-type) {
       position: static;
       margin-bottom: 20px;
       margin-right: 0;
       margin-left: 0;
       max-width: none; } }
   @media (max-width: 767px) {
-    .page-footer__description {
+    .page-footer p:not(:first-of-type) {
       padding-left: 35px;
       padding-right: 35px; } }
 

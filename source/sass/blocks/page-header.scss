@@ -21,7 +21,7 @@
   }
 }
 
-.page-header__logo-link {
+.page-header > a:first-of-type {
   position: absolute;
   top: 315px;
   left: 72px;
@@ -38,17 +38,19 @@
   @media (max-width: $tablet-only-width) {
     top: 21px;
     left: 22px;
-
-    .page-header--nojs & {
-      top: auto;
-      bottom: -100px;
-      left: 50%;
-      transform: translateX(-50%);
-    }
   }
 
   @media (max-width: $mobile-only-width) {
     top: 21px;
     left: 16px;
+  }
+}
+
+.page-header--nojs > a:first-of-type {
+  @media (max-width: $tablet-only-width) {
+    top: auto;
+    bottom: -100px;
+    left: 50%;
+    transform: translateX(-50%);
   }
 }

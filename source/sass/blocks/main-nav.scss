@@ -28,34 +28,38 @@
     &:active {
       opacity: 0.6;
     }
+  }
+}
 
-    .main-nav--opened & {
-      padding-top: 13px;
-      padding-bottom: 12px;
+.main-nav--nojs .main-nav__toggle {
+  @media (max-width: $tablet-only-width) {
+    display: none;
+  }
+}
 
-      color: $button-color;
+.main-nav--opened .main-nav__toggle {
+  @media (max-width: $tablet-only-width) {
+    padding-top: 13px;
+    padding-bottom: 12px;
 
-      background: $basic-background-color;
+    color: $button-color;
 
-      &:hover,
-      &:focus {
-        color: $accent-color;
-        outline: none;
-      }
+    background: $basic-background-color;
 
-      &:active {
-        color: rgba($accent-color, 0.6);
-        outline: none;
-      }
+    &:hover,
+    &:focus {
+      color: $accent-color;
+      outline: none;
     }
 
-    .main-nav--nojs & {
-      display: none;
+    &:active {
+      color: rgba($accent-color, 0.6);
+      outline: none;
     }
   }
 }
 
-.main-nav__list {
+.main-nav ul {
   @include list-style-reset;
 
   padding-top: 18px;
@@ -81,14 +85,18 @@
     width: 100%;
 
     background-color: $basic-background-color;
+  }
+}
 
-    .main-nav--nojs & {
-      position: static;
-    }
+.main-nav--nojs ul {
+  @media (max-width: $tablet-only-width) {
+    position: static;
+  }
+}
 
-    .main-nav--opened & {
-      display: block;
-    }
+.main-nav--opened ul {
+  @media (max-width: $tablet-only-width) {
+    display: block;
   }
 }
 
@@ -113,12 +121,12 @@
 
   opacity: 0.7;
 
-  &[href]:hover,
-  &[href]:focus {
+  &:hover,
+  &:focus {
     opacity: 1;
   }
 
-  &[href]:active {
+  &:active {
     opacity: 0.3;
   }
 
@@ -140,13 +148,13 @@
 
     opacity: 1;
 
-    &[href]:hover,
-    &[href]:focus {
+    &:hover,
+    &:focus {
       background-color: $accent-color;
       outline: none;
     }
 
-    &[href]:active {
+    &:active {
       opacity: 0.6;
     }
   }
@@ -154,18 +162,18 @@
 
 .main-nav__image-menu {
   display: block;
+}
 
-  .main-nav--opened & {
-    display: none;
-  }
+.main-nav--opened .main-nav__image-menu {
+  display: none;
 }
 
 .main-nav__image-cross {
   display: none;
+}
 
-  .main-nav--opened & {
-    display: block;
-  }
+.main-nav--opened .main-nav__image-cross {
+  display: block;
 }
 
 .main-nav__icon {

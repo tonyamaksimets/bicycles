@@ -23,7 +23,7 @@
   }
 }
 
-.page-footer__headline {
+.page-footer p:first-of-type {
   @include paragraph-style-reset;
 
   position: relative;
@@ -50,7 +50,7 @@
   }
 }
 
-.page-footer__description {
+.page-footer p:not(:first-of-type) {
   @include paragraph-style-reset;
 
   position: relative;
