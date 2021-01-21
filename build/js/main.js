@@ -23,6 +23,24 @@
 'use strict';
 
 (function () {
+  var anchors = document.querySelectorAll('a[href*="#"]');
+
+  if (anchors) {
+    anchors.forEach(function (anchor) {
+      anchor.addEventListener('click', function (evt) {
+        evt.preventDefault();
+
+        var target = anchor.getAttribute('href').slice(1);
+
+        document.getElementById(target).scrollIntoView({behavior: 'smooth', block: 'start'});
+      });
+    });
+  }
+})();
+
+'use strict';
+
+(function () {
   var inputs = document.querySelectorAll('input');
 
   var regExp = /[0-9]/;

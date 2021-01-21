@@ -96,7 +96,6 @@
   left: 50%;
   transform: translateX(-50%) translateY(-50%);
 
-  padding-left: 5px;
   width: 65px;
   height: 65px;
   box-sizing: border-box;
@@ -128,17 +127,10 @@
 }
 
 .video svg {
-  @media (max-width: $tablet-only-width) {
-    width: 18px;
-    height: 25px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
 
-    line-height: 25px;
-  }
-
-  @media (max-width: $mobile-only-width) {
-    width: 14px;
-    height: 19px;
-
-    line-height: 19px;
-  }
+  margin-left: 3px;
 }

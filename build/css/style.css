@@ -380,7 +380,8 @@ template {
       -webkit-transform: none;
               transform: none;
       left: 0;
-      padding: 0;
+      padding-left: 0;
+      padding-right: 0;
       width: 100%; }
       .page-header--nojs {
         position: relative; } }
@@ -448,7 +449,7 @@ template {
     padding-top: 13px;
     padding-bottom: 12px;
     color: rgba(20, 21, 23, 0.2);
-    background: #ffffff; }
+    background-color: #ffffff; }
     .main-nav--opened .main-nav__toggle:hover, .main-nav--opened .main-nav__toggle:focus {
       color: #0ad9c6;
       outline: none; }
@@ -565,13 +566,13 @@ template {
   padding-bottom: 240px;
   padding-left: calc(50% - 440px);
   background-color: #131314;
-  background-image: url("../img/background@1x.webp");
+  background-image: url("../img/background@1x.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat; }
   @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
     .page-main__wrapper {
-      background-image: url("../img/background@2x.webp"); } }
+      background-image: url("../img/background@2x.jpg"); } }
   @media (max-width: 1023px) {
     .page-main__wrapper {
       padding-top: 134px;
@@ -1187,7 +1188,6 @@ template {
   left: 50%;
   -webkit-transform: translateX(-50%) translateY(-50%);
           transform: translateX(-50%) translateY(-50%);
-  padding-left: 5px;
   width: 65px;
   height: 65px;
   -webkit-box-sizing: border-box;
@@ -1209,14 +1209,10 @@ template {
       width: 65px;
       height: 65px; } }
 
-@media (max-width: 1023px) {
-  .video svg {
-    width: 18px;
-    height: 25px;
-    line-height: 25px; } }
-
-@media (max-width: 767px) {
-  .video svg {
-    width: 14px;
-    height: 19px;
-    line-height: 19px; } }
+.video svg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+          transform: translateX(-50%) translateY(-50%);
+  margin-left: 3px; }
