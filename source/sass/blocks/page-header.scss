@@ -3,17 +3,17 @@
   left: 50%;
   transform: translateX(-50%);
 
-  padding-left: 75px;
-  padding-right: 75px;
-  width: $desktop-width;
+  margin-left: auto;
+  margin-right: auto;
+  width: 874px;
   box-sizing: border-box;
 
   @media (max-width: $tablet-only-width) {
     transform: none;
     left: 0;
 
-    padding-left: 0;
-    padding-right: 0;
+    margin-left: 0;
+    margin-right: 0;
     width: 100%;
 
     &--nojs {
@@ -25,7 +25,7 @@
 .page-header > a:first-of-type {
   position: absolute;
   top: 315px;
-  left: 72px;
+  left: -3px;
 
   &[href]:hover,
   &[href]:focus {

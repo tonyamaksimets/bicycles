@@ -2,7 +2,7 @@
   margin-right: auto;
   margin-left: auto;
   padding-top: 100px;
-  padding-bottom: 95px;
+  padding-bottom: 73px;
   padding-left: 20px;
   padding-right: 20px;
   max-width: $desktop-width;
@@ -12,7 +12,7 @@
 
   @media (max-width: $tablet-only-width) {
     padding-top: 40px;
-    padding-bottom: 50px;
+    padding-bottom: 28px;
     padding-left: 35px;
     padding-right: 35px;
   }
@@ -20,6 +20,7 @@
   @media (max-width: $mobile-only-width) {
     padding-left: 0;
     padding-right: 0;
+    padding-bottom: 50px;
   }
 }
 
@@ -120,6 +121,8 @@
 .page-footer a {
   @include link-style-reset;
 
+  margin-bottom: 22px;
+
   font-size: 16px;
   line-height: 22px;
   text-align: center;
@@ -136,8 +139,6 @@
   }
 
   @media (max-width: $mobile-only-width) {
-    margin-bottom: 22px;
-
     &:last-child {
       margin-bottom: 0;
     }

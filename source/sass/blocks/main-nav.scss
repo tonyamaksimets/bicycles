@@ -79,18 +79,38 @@
 
     display: none;
     padding-top: 100px;
-    padding-bottom: 138px;
+    padding-bottom: 100px;
     padding-left: 0;
     padding-right: 0;
     width: 100%;
+    height: 100vh;
+    box-sizing: border-box;
 
     background-color: $basic-background-color;
+
+    overflow-y: auto;
+
+    &::before {
+      content: "";
+
+      position: fixed;
+      top: 0;
+      left: 0;
+
+      display: block;
+      width: 100%;
+      height: 50px;
+
+      background-color: $basic-background-color;
+    }
   }
 }
 
 .main-nav--nojs ul {
   @media (max-width: $tablet-only-width) {
     position: static;
+
+    height: auto;
   }
 }
 
